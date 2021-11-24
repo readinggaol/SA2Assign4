@@ -30,17 +30,19 @@ class DDR4(RAM):
     def __init__(self, amount):
         super().__init__()
         self.amount = amount
+        self.rate = 10
         self.type = "DDR4"
 
     def get_cost(self):
-        return self.amount * 10
+        return self.amount * self.rate
 
 
 class DDR6(RAM):
     def __init__(self, amount):
         super().__init__()
         self.amount = amount
+        self.rate = 12.5
         self.type = "DDR6"
 
     def get_cost(self):
-        return self.amount * 12.5
+        return self.amount * self.rate
